@@ -1,0 +1,13 @@
+@mixin para-font
+{
+    font-size:24px;
+}
+@mixin para-color
+{
+   color:#000;
+   background-color:#ddd;
+
+}
+@mixin para-padding{
+    padding: 20px;
+}
