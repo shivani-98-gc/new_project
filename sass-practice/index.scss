@@ -1,0 +1,50 @@
+@mixin no-space{
+    margin:0;
+    padding:0px;
+}
+@mixin flex-property{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin float-property($flex){
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+body{
+    @include no-space;
+}
+.header-container{
+  background-color: #eee;
+}
+.header{
+    max-width:1200px;
+    margin:0 auto;
+
+    h3{
+        margin:0px;
+    }
+    ul 
+    {
+        @include no-space;
+        @include flex-property;
+        li {
+            
+            list-style: none;
+            a {
+            color:red;
+                           // You can also store the font weight in a variable if needed
+                           $medium-weight: map.get($font-weights, "medium");
+                           font-weight: $medium-weight;
+           
+                           // Debugging the value (ensure it's for dev purposes only)
+                           @debug $medium-weight; // 500
+           
+           } 
+        }
+
+    }
+}

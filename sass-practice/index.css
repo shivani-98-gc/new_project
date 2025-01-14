@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  background-color: #eee;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header h3 {
+  margin: 0;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header ul li {
+  list-style: none;
+}
+.header ul li a {
+  color: red;
+  font-weight: 500;
+}/*# sourceMappingURL=index.css.map */
