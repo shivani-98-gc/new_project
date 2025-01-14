@@ -7,10 +7,11 @@
     align-items: center;
     justify-content: center;
 }
-@mixin float-property($flex){
+@mixin float-property($justify){
+    
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: $justify;
 }
 $font-weights: ("regular": 400, "medium": 500, "bold": 700);
 
@@ -21,8 +22,10 @@ body{
   background-color: #eee;
 }
 .header{
+    @include float-property(space-between);
     max-width:1200px;
     margin:0 auto;
+    padding:15px 0;
 
     h3{
         margin:0px;
@@ -31,20 +34,15 @@ body{
     {
         @include no-space;
         @include flex-property;
-        li {
-            
-            list-style: none;
-            a {
-            color:red;
-                           // You can also store the font weight in a variable if needed
-                           $medium-weight: map.get($font-weights, "medium");
-                           font-weight: $medium-weight;
-           
-                           // Debugging the value (ensure it's for dev purposes only)
-                           @debug $medium-weight; // 500
-           
-           } 
+        gap:20px;
+        li{
+            list-style:none;
+            a{
+                text-decoration: none;
+                color:#000;
+                font-size: 18px;
+            }
+        }
         }
 
     }
-}
